@@ -2,7 +2,7 @@ defmodule PhoenixPubsubRedis.Mixfile do
   use Mix.Project
 
   @version "3.0.2"
-  @source_url "https://github.com/phoenixframework/phoenix_pubsub_redis"
+  @source_url "https://github.com/primait/phoenix_pubsub_redis"
 
   def project do
     [
@@ -13,12 +13,8 @@ defmodule PhoenixPubsubRedis.Mixfile do
       start_permanent: Mix.env() == :prod,
       package: package(),
       deps: deps(),
-      description: "The Redis PubSub adapter for the Phoenix framework",
-      docs: [
-        source_ref: "v#{@version}",
-        source_url: @source_url,
-        main: "Phoenix.PubSub.Redis"
-      ]
+      description: "A fork of the Redis PubSub adapter for the Phoenix framework",
+      docs: docs()
     ]
   end
 
@@ -45,9 +41,18 @@ defmodule PhoenixPubsubRedis.Mixfile do
 
   defp package do
     [
-      maintainers: ["Chris McCord"],
-      licenses: ["MIT"],
-      links: %{GitHub: @source_url}
+      organization: "prima",
+      licenses: ["Apache-2.0"],
+      links: %{"GitHub" => @source_url}
+    ]
+  end
+
+  defp docs do
+    [
+      main: "readme",
+      source_ref: @version,
+      source_url: @source_url,
+      extras: ["README.md"]
     ]
   end
 end
