@@ -41,8 +41,8 @@ defmodule PhoenixPubsubRedis.Mixfile do
 
   defp package do
     [
-      organization: "prima",
       licenses: ["Apache-2.0"],
+      maintainers: ["prima-assicurazioni"],
       links: %{"GitHub" => @source_url}
     ]
   end
