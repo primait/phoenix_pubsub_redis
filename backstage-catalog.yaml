@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "phoenix_pubsub_redis"
+  description: "A Redis PubSub adapter for the Phoenix framework"
+spec:
+  type: "library"
+  lifecycle: production
+  owner: "group:default/team-claims-operations"
+  system: prima.it
